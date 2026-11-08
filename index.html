@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mobiDEX — Star Citizen Data.p4k explorer</title>
+  <meta name="description" content="mobiDEX opens Star Citizen's Data.p4k: browse ships, weapons, armour and clothing in 3D, read game data, play sounds, and compare LIVE against PTU.">
+  <meta name="theme-color" content="#14181f">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="mobiDEX — Star Citizen Data.p4k explorer">
+  <meta property="og:description" content="Models, files and everything in between.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="mobiDEX home">
+      <img src="assets/img/logo.png" alt="" width="28" height="28">
+      <span class="wordmark">mobi<b>DEX</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#tour">Tour</a>
+      <a href="#compare">Compare</a>
+      <a href="#start">Get started</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-sm" data-download href="https://github.com/CitizenRen/mobiDEX/releases/latest">Download</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <img class="hero-logo" src="assets/img/logo.png" alt="" width="72" height="72">
+        <h1 class="wordmark big">mobi<b>DEX</b></h1>
+        <p class="tagline">Star Citizen's Data.p4k — models, files and everything in between.</p>
+        <p class="lede">Point it at your game install and browse every ship, gun, helmet and hat in 3D. Read the data behind them, play the sounds, and see exactly what changed between LIVE and PTU.</p>
+        <div class="cta-row">
+          <a class="btn" data-download href="https://github.com/CitizenRen/mobiDEX/releases/latest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" /></svg>
+            Download for Windows
+          </a>
+          <a class="btn btn-ghost" href="#tour">Take the tour</a>
+        </div>
+        <p class="meta"><span data-version>Latest release</span><span data-release-date></span> · free · educational use only</p>
+      </div>
+
+      <figure class="window hero-shot">
+        <img src="assets/img/shots/models-ships.webp" alt="mobiDEX Models tab showing the Anvil F7C-M Hornet Heartseeker Mk II rendered in 3D next to the ship list" width="1822" height="1054" fetchpriority="high">
+      </figure>
+    </div>
+
+    <div class="wrap">
+      <dl class="stats" aria-label="What one build of Star Citizen 4.10.2 LIVE contains, as read by mobiDEX">
+        <div><dt>files</dt><dd>1,379,308</dd></div>
+        <div><dt>DataCore records</dt><dd>62,736</dd></div>
+        <div><dt>text strings</dt><dd>90,946</dd></div>
+        <div><dt>items</dt><dd>29,693</dd></div>
+      </dl>
+      <p class="stats-note">One Data.p4k — sc-alpha-4.10.2 LIVE — as indexed by mobiDEX.</p>
+    </div>
+  </section>
+
+  <!-- TOUR -->
+  <section class="tour" id="tour">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker">The tour</p>
+        <h2>Five tabs. One archive.</h2>
+        <p>Same layout as the app — pick a tab on the left.</p>
+      </header>
+
+      <div class="app" data-tour>
+        <div class="app-side" role="tablist" aria-label="mobiDEX tabs" aria-orientation="vertical">
+          <button role="tab" aria-selected="true" data-tab="models" id="tab-models">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12 21 4l-6 17-3-7-9-2Z"/></svg>Models</button>
+          <button role="tab" aria-selected="false" data-tab="index" id="tab-index">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c3 3 3 13 0 16M12 4c-3 3-3 13 0 16"/></svg>Index</button>
+          <button role="tab" aria-selected="false" data-tab="audio" id="tab-audio">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Zm12 0a4 4 0 0 1 0 6m2-9a8 8 0 0 1 0 12"/></svg>Audio</button>
+          <button role="tab" aria-selected="false" data-tab="compare" id="tab-compare">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h12l-3-3m3 3-3 3M20 17H8l3-3m-3 3 3 3"/></svg>Compare</button>
+          <button role="tab" aria-selected="false" data-tab="files" id="tab-files">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6V3Zm8 0v4h4"/></svg>Files</button>
+        </div>
+
+        <div class="app-main">
+          <!-- MODELS -->
+          <div class="panel" role="tabpanel" data-panel="models" aria-labelledby="tab-models">
+            <div class="panel-copy">
+              <h3>Models</h3>
+              <p>Ships, weapons, armour, clothing and ground vehicles, rendered in full PBR. Drag to rotate, right-drag to pan, wheel to zoom. Swap paints, put armour on a body, walk around it, and export.</p>
+            </div>
+            <div class="chips" role="group" aria-label="Model category">
+              <button class="chip is-on" data-shot="models-ships" data-cap="Anvil F7C-M Hornet Heartseeker Mk II">Ships <span>1099</span></button>
+              <button class="chip" data-shot="models-weapons" data-cap="Klaus &amp; Werner Arclight Pistol">Weapons <span>590</span></button>
+              <button class="chip" data-shot="models-armour" data-cap="Arden-SL Helmet Archangel, on body">Armour <span>2524</span></button>
+              <button class="chip" data-shot="models-clothing" data-cap="Jacopo Tophat, on body">Clothing <span>1977</span></button>
+              <button class="chip" data-shot="models-vehicles" data-cap="Greycat UTV">Ground vehicles <span>40</span></button>
+            </div>
+          </div>
+
+          <!-- INDEX -->
+          <div class="panel" role="tabpanel" data-panel="index" aria-labelledby="tab-index" hidden>
+            <div class="panel-copy">
+              <h3>Index</h3>
+              <p>The game data, formatted for people. Stats, descriptions, where to buy, paints and variants for ships and weapons — plus blueprints with their craft costs, and Wikelo contracts with what they ask for and what they pay out.</p>
+            </div>
+            <div class="chips" role="group" aria-label="Index category">
+              <button class="chip is-on" data-shot="index-ships" data-cap="Aegis Idris-M — frigate stats, cargo, paints">Ships &amp; vehicles</button>
+              <button class="chip" data-shot="index-weapons" data-cap="Hedeby Gunworks Arlington Rifle">Weapons</button>
+              <button class="chip" data-shot="index-blueprints" data-cap="Calico Helmet Tactical blueprint">Blueprints</button>
+              <button class="chip" data-shot="index-wikelo" data-cap="Wikelo contract: Pulse Plus">Wikelo</button>
+            </div>
+          </div>
+
+          <!-- AUDIO -->
+          <div class="panel" role="tabpanel" data-panel="audio" aria-labelledby="tab-audio" hidden>
+            <div class="panel-copy">
+              <h3>Audio</h3>
+              <p>Every sound event, searchable — music, ambience, weapons, voice. Play it with the waveform in front of you, then save it out as MP3.</p>
+            </div>
+            <div class="chips" hidden><button class="chip is-on" data-shot="audio" data-cap="Fleet Week music on the Drake hall, with waveform">Audio</button></div>
+          </div>
+
+          <!-- COMPARE -->
+          <div class="panel" role="tabpanel" data-panel="compare" aria-labelledby="tab-compare" hidden>
+            <div class="panel-copy">
+              <h3>Compare</h3>
+              <p>Open a second Data.p4k and get a full diff: items added, removed and changed, by category, down to the field. Export the changelog as Markdown.</p>
+            </div>
+            <div class="chips" hidden><button class="chip is-on" data-shot="compare" data-cap="LIVE 4.10.2 vs PTU 5.0.0 — Aegis Javelin field diff">Compare</button></div>
+          </div>
+
+          <!-- FILES -->
+          <div class="panel" role="tabpanel" data-panel="files" aria-labelledby="tab-files" hidden>
+            <div class="panel-copy">
+              <h3>Files</h3>
+              <p>The raw archive as a folder tree. Preview a file, or extract a whole folder — with XML and PNG conversion as you go.</p>
+            </div>
+            <div class="chips" hidden><button class="chip is-on" data-shot="files" data-cap="Data folder tree">Files</button></div>
+          </div>
+
+          <figure class="stage">
+            <button class="stage-btn" type="button" aria-label="Open screenshot full size">
+              <img data-stage src="assets/img/shots/models-ships.webp" alt="Anvil F7C-M Hornet Heartseeker Mk II" width="1822" height="1054" loading="lazy">
+            </button>
+            <figcaption data-stage-cap>Anvil F7C-M Hornet Heartseeker Mk II</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE FEATURE -->
+  <section class="compare" id="compare">
+    <div class="wrap compare-grid">
+      <div>
+        <p class="kicker">Patch day</p>
+        <h2>LIVE vs PTU, field by field.</h2>
+        <p>Pick your LIVE build and your PTU build. mobiDEX lines up every DataCore record, text string and file, then tells you what moved — not just <em>that</em> a ship changed, but which value, from what, to what.</p>
+        <ul class="ticks">
+          <li>Added, removed and changed — filtered by ships, weapons, armour, components and more</li>
+          <li>Jump from any changed item straight to it in 3D</li>
+          <li>Export the changelog as Markdown, or the full list as text</li>
+        </ul>
+      </div>
+
+      <div class="diff" role="img" aria-label="Example diff for the Aegis Javelin between LIVE 4.10.2 and PTU 5.0.0">
+        <div class="diff-head">
+          <span><b class="live">LIVE</b> sc-alpha-4.10.2</span>
+          <span class="arrow">→</span>
+          <span><b class="ptu">PTU</b> sc-alpha-5.0.0</span>
+        </div>
+        <p class="diff-title">Aegis Javelin <small>Ships · data changed</small></p>
+        <ol>
+          <li class="chg"><code>Components[0].crewSize</code><span>1 → 65 <em>(+64)</em></span></li>
+          <li class="chg"><code>Components[0].maxBoundingBoxSize.x</code><span>0 → 210</span></li>
+          <li class="chg"><code>Components[0].maxBoundingBoxSize.y</code><span>0 → 475</span></li>
+          <li class="add"><code>Components[30].Ports[0].attachAxesToAlign</code><span>+ Default</span></li>
+          <li class="del"><code>Components[39].occluderSettings._Type_</code><span>− SurfaceRaindrops_Occluder</span></li>
+          <li class="del"><code>Components[39].overrideControls.useFlatVisor</code><span>− false</span></li>
+        </ol>
+        <div class="diff-foot">Items <b class="add">+530</b> <b class="del">−112</b> <b class="chg">~10,451</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET STARTED -->
+  <section class="start" id="start">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker">Get started</p>
+        <h2>Three steps to the inside of the 'verse.</h2>
+      </header>
+      <ol class="steps">
+        <li>
+          <span class="n">01</span>
+          <h3>Download</h3>
+          <p>Grab the latest build from the <a data-download href="https://github.com/CitizenRen/mobiDEX/releases/latest">releases page</a> and unzip it anywhere.</p>
+        </li>
+        <li>
+          <span class="n">02</span>
+          <h3>Open a Data.p4k</h3>
+          <p>Usually here:</p>
+          <code class="path">C:\Program Files\Roberts Space Industries\StarCitizen\LIVE\Data.p4k</code>
+          <p>Recent builds are remembered, so LIVE and PTU are one click away next time.</p>
+        </li>
+        <li>
+          <span class="n">03</span>
+          <h3>Explore</h3>
+          <p>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to search items, files, text and records from anywhere.</p>
+        </li>
+      </ol>
+      <figure class="window start-shot">
+        <img src="assets/img/shots/start.webp" alt="mobiDEX start screen with recent LIVE and PTU Data.p4k files and an Open a Data.p4k button" width="1822" height="1054" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap narrow">
+      <header class="sec-head">
+        <p class="kicker">FAQ</p>
+        <h2>Questions</h2>
+      </header>
+      <details>
+        <summary>Is mobiDEX free?</summary>
+        <p>Yes. Download it from the GitHub releases page.</p>
+      </details>
+      <details>
+        <summary>Is it open source?</summary>
+        <p>No. The source isn't public — GitHub is used to publish releases.</p>
+        <p>However, the source code will be made public at a later date, once mobiDEX is in a place i am happy with.</p>
+      </details>
+      <details>
+        <summary>Can I use what I extract commercially?</summary>
+        <p>No. mobiDEX is for educational use only. Game assets belong to Cloud Imperium Games; follow their fan content guidelines.</p>
+      </details>
+      <details>
+        <summary>Is this made by RSI or CIG?</summary>
+        <p>No. mobiDEX is an unofficial community tool and isn't affiliated with or endorsed by Roberts Space Industries or Cloud Imperium Games.</p>
+      </details>
+      <details>
+        <summary>Which builds does it read?</summary>
+        <p>Any Data.p4k you point it at — LIVE, PTU, or an older copy you've kept for comparing.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="mbtc">
+      <img src="assets/img/made-by-the-community.png" alt="Made by the Community" width="120" height="120">
+    </div>
+    <div class="footer-copy">
+      <a class="brand" href="#top"><img src="assets/img/logo.png" alt="" width="22" height="22"><span class="wordmark">mobi<b>DEX</b></span></a>
+      <p>This is an unofficial Star Citizen fan tool, not affiliated with the Cloud Imperium group of companies. All content on this site not authored by its host or users is property of their respective owners. Star Citizen®, Roberts Space Industries® and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC.</p>
+      <p>For educational use only. Not for commercial use.</p>
+      <p class="small"><a data-download href="https://github.com/CitizenRen/mobiDEX/releases/latest">Releases</a> · <a href="#top">Back to top ↑</a></p>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lightbox" data-lightbox>
+  <form method="dialog"><button class="lb-close" aria-label="Close">×</button></form>
+  <img alt="" data-lightbox-img>
+</dialog>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
