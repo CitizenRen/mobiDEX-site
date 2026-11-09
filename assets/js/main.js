@@ -138,3 +138,22 @@ const REPO = "CitizenRen/mobiDEX";
   });
   dlg.addEventListener("click", (e) => { if (e.target === dlg || e.target === img) dlg.close(); });
 })();
+
+/* ---------- Copy buttons (referral code) ---------- */
+document.querySelectorAll("[data-copy]").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const text = btn.dataset.copy;
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (e) {
+      const t = document.createElement("textarea");
+      t.value = text; document.body.appendChild(t); t.select();
+      try { document.execCommand("copy"); } catch (_) {}
+      t.remove();
+    }
+    const label = btn.textContent;
+    btn.textContent = "Copied ✓";
+    btn.classList.add("is-done");
+    setTimeout(() => { btn.textContent = label; btn.classList.remove("is-done"); }, 1600);
+  });
+});
