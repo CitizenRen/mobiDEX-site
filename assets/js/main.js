@@ -98,7 +98,7 @@ const REPO = "CitizenRen/mobiDEX";
   }
 
   tabs.forEach((t, i) => {
-    t.tabIndex = i === 0 ? 0 : -1;
+    t.tabIndex = t.getAttribute("aria-selected") === "true" ? 0 : -1;
     t.addEventListener("click", () => selectTab(t));
     t.addEventListener("keydown", (e) => {
       const k = e.key;

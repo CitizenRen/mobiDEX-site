@@ -63,7 +63,7 @@
       </div>
 
       <figure class="window hero-shot">
-        <img src="assets/img/shots/models-ships.webp" alt="mobiDex Models tab showing the Anvil F7C-M Hornet Heartseeker Mk II rendered in 3D next to the ship list" width="1822" height="1054" fetchpriority="high">
+        <img src="assets/img/shots/prefabs-ships.webp" alt="mobiDex Prefabs tab showing the Anvil F7C-M Hornet Heartseeker Mk II rendered in 3D next to the ship list" width="2146" height="1175" fetchpriority="high">
       </figure>
     </div>
 
@@ -84,54 +84,67 @@
       <header class="sec-head">
         <p class="kicker">The tour</p>
         <h2>Five tabs. One archive.</h2>
-        <p>Same layout as the app — pick a tab on the left.</p>
+        <p>Same layout as the app — pick a tab on the left, then a category.</p>
       </header>
 
       <div class="app" data-tour>
         <div class="app-side" role="tablist" aria-label="mobiDex tabs" aria-orientation="vertical">
-          <button role="tab" aria-selected="true" data-tab="models" id="tab-models">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12 21 4l-6 17-3-7-9-2Z"/></svg>Models</button>
           <button role="tab" aria-selected="false" data-tab="index" id="tab-index">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c3 3 3 13 0 16M12 4c-3 3-3 13 0 16"/></svg>Index</button>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 2.6 2.8 15.4 0 18M12 3c-2.8 2.6-2.8 15.4 0 18M4.6 7.5h14.8M4.6 16.5h14.8"/></svg>Index</button>
+          <button role="tab" aria-selected="true" data-tab="prefabs" id="tab-prefabs">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7l-8-4Z"/><path d="m4 7 8 4 8-4M12 11v10M8 5l8 4v3"/></svg>Prefabs</button>
           <button role="tab" aria-selected="false" data-tab="audio" id="tab-audio">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Zm12 0a4 4 0 0 1 0 6m2-9a8 8 0 0 1 0 12"/></svg>Audio</button>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h3l4 4V6l-4 4H3Z" class="fill"/><path d="M14 9.5a3.5 3.5 0 0 1 0 5M16.5 7a7 7 0 0 1 0 10M19 4.5a10.5 10.5 0 0 1 0 15"/></svg>Audio</button>
           <button role="tab" aria-selected="false" data-tab="compare" id="tab-compare">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h12l-3-3m3 3-3 3M20 17H8l3-3m-3 3 3 3"/></svg>Compare</button>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3.5c4.5 0 6.5 10 11 10H21M3 17h3.5c1.6 0 2.8-1.3 3.8-3M21 7h-3.5c-1.6 0-2.8 1.3-3.8 3M18 4l3 3-3 3M18 14l3 3-3 3"/></svg>Compare</button>
           <button role="tab" aria-selected="false" data-tab="files" id="tab-files">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6V3Zm8 0v4h4"/></svg>Files</button>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h7l7 7-6 9-8-5 2-6-2-5Z"/><path d="M12 4v4l7 3"/></svg>Files</button>
         </div>
 
         <div class="app-main">
-          <!-- MODELS -->
-          <div class="panel" role="tabpanel" data-panel="models" aria-labelledby="tab-models">
-            <div class="panel-copy">
-              <h3>Models</h3>
-              <p>Ships, weapons, armour, clothing and ground vehicles, rendered in full PBR. Drag to rotate, right-drag to pan, wheel to zoom. Swap paints, put armour on a body, walk around it, and export.</p>
-            </div>
-            <div class="chips" role="group" aria-label="Model category">
-              <button class="chip is-on" data-shot="models-ships" data-cap="Anvil F7C-M Hornet Heartseeker Mk II">Ships <span>1099</span></button>
-              <button class="chip" data-shot="models-weapons" data-cap="Klaus &amp; Werner Arclight Pistol">Weapons <span>590</span></button>
-              <button class="chip" data-shot="models-armour" data-cap="Arden-SL Helmet Archangel, on body">Armour <span>2524</span></button>
-              <button class="chip" data-shot="models-clothing" data-cap="Jacopo Tophat, on body">Clothing <span>1977</span></button>
-              <button class="chip" data-shot="models-vehicles" data-cap="Greycat UTV">Ground vehicles <span>40</span></button>
-            </div>
-          </div>
-
-          <!-- INDEX -->
           <div class="panel" role="tabpanel" data-panel="index" aria-labelledby="tab-index" hidden>
             <div class="panel-copy">
               <h3>Index</h3>
-              <p>The game data, formatted for people. Stats, descriptions, where to buy, paints and variants for ships and weapons — plus blueprints with their craft costs, and Wikelo contracts with what they ask for and what they pay out.</p>
+              <p>The game data, formatted for people. Ships, weapons, armour, clothing, components, paints and blueprints with stats, descriptions and variants beside a 3D preview — plus Wikelo, missions, contracts and rewards with what they ask for and what they pay out.</p>
             </div>
             <div class="chips" role="group" aria-label="Index category">
-              <button class="chip is-on" data-shot="index-ships" data-cap="Aegis Idris-M — frigate stats, cargo, paints">Ships &amp; vehicles</button>
-              <button class="chip" data-shot="index-weapons" data-cap="Hedeby Gunworks Arlington Rifle">Weapons</button>
-              <button class="chip" data-shot="index-blueprints" data-cap="Calico Helmet Tactical blueprint">Blueprints</button>
-              <button class="chip" data-shot="index-wikelo" data-cap="Wikelo contract: Pulse Plus">Wikelo</button>
+              <button class="chip is-on" data-shot="index-ships" data-cap="Aegis Avenger Stalker">Ships &amp; vehicles</button>
+              <button class="chip" data-shot="index-weapons" data-cap="Kastak Arms Coda Pistol">Weapons</button>
+              <button class="chip" data-shot="index-armour" data-cap="Virgil Sangar Helmet">Armour</button>
+              <button class="chip" data-shot="index-clothing" data-cap="Second Tevarin War Service Jacket">Clothing</button>
+              <button class="chip" data-shot="index-ship-weapons" data-cap="Apocalypse Arms Predator Scattergun Sharkmouth Edition">Ship weapons</button>
+              <button class="chip" data-shot="index-comps" data-cap="Yorm Jaghte">Ship components</button>
+              <button class="chip" data-shot="index-paints" data-cap="Carrack Citizens for Prosperity Garnet Livery">Paints</button>
+              <button class="chip" data-shot="index-blueprints" data-cap="BR-2 “Purgatory Camo” Shotgun blueprint">Blueprints</button>
+              <button class="chip" data-shot="index-wikelo" data-cap="Wikelo contract: Armor with Vanduul">Wikelo</button>
+              <button class="chip" data-shot="index-all-items" data-cap="Apocalypse Arms Vendetta HMG">All items</button>
+              <button class="chip" data-shot="index-missions" data-cap="Bounty assignment from Northrock Service Group">Missions</button>
+              <button class="chip" data-shot="index-contracts" data-cap="Ambush Op contract">Contracts</button>
+              <button class="chip" data-shot="index-rewards" data-cap="Alliance Aid: Collect Manufacturing Resource — rewards">Rewards</button>
             </div>
           </div>
 
-          <!-- AUDIO -->
+          <div class="panel" role="tabpanel" data-panel="prefabs" aria-labelledby="tab-prefabs">
+            <div class="panel-copy">
+              <h3>Prefabs</h3>
+              <p>Every model the game ships, in 3D: ships, weapons, armour, clothing, vehicles, components, hangar flair, food and storage — even holoviewers and whole locations you can fly through. Swap paints, put armour on a body, walk around it, and export.</p>
+            </div>
+            <div class="chips" role="group" aria-label="Prefab category">
+              <button class="chip is-on" data-shot="prefabs-ships" data-cap="Anvil F7C-M Hornet Heartseeker Mk II">Ships <span>1047</span></button>
+              <button class="chip" data-shot="prefabs-weapons" data-cap="BR-2 Shotgun">Weapons <span>637</span></button>
+              <button class="chip" data-shot="prefabs-armour" data-cap="Aves Talon Arms, on body">Armour <span>2540</span></button>
+              <button class="chip" data-shot="prefabs-clothing" data-cap="Ajax Security Uniform Pants, on body">Clothing <span>1980</span></button>
+              <button class="chip" data-shot="prefabs-ground-vehicles" data-cap="Greycat UTV">Ground vehicles <span>40</span></button>
+              <button class="chip" data-shot="prefabs-ship-weapons" data-cap="Omnisky XV Cannon">Ship weapons <span>1482</span></button>
+              <button class="chip" data-shot="prefabs-comps" data-cap="StarBurn">Ship components <span>419</span></button>
+              <button class="chip" data-shot="prefabs-flair" data-cap="Aegis Idris-M Model">Hangar flair <span>270</span></button>
+              <button class="chip" data-shot="prefabs-food" data-cap="Cheese and Tomato Pizza">Consumables &amp; gadgets <span>355</span></button>
+              <button class="chip" data-shot="prefabs-storage" data-cap="Stor*All 1 SCU storage container">Storage &amp; commodities <span>1818</span></button>
+              <button class="chip" data-shot="prefabs-holoviewer" data-cap="Ship holoviewer">Holoviewers</button>
+              <button class="chip" data-shot="prefabs-locations" data-cap="Fly through a location — drag to look, WASD to move">Locations</button>
+            </div>
+          </div>
+
           <div class="panel" role="tabpanel" data-panel="audio" aria-labelledby="tab-audio" hidden>
             <div class="panel-copy">
               <h3>Audio</h3>
@@ -140,27 +153,25 @@
             <div class="chips" hidden><button class="chip is-on" data-shot="audio" data-cap="Fleet Week music on the Drake hall, with waveform">Audio</button></div>
           </div>
 
-          <!-- COMPARE -->
           <div class="panel" role="tabpanel" data-panel="compare" aria-labelledby="tab-compare" hidden>
             <div class="panel-copy">
               <h3>Compare</h3>
-              <p>Open a second Data.p4k and get a full diff: items added, removed and changed, by category, down to the field. Export the changelog as Markdown.</p>
+              <p>Open a second Data.p4k and get a full diff: items, ships, weapons, components, records, text and files added, removed and changed — down to the field. Export the changelog as Markdown.</p>
             </div>
-            <div class="chips" hidden><button class="chip is-on" data-shot="compare" data-cap="LIVE 4.10.2 vs PTU 5.0.0 — Aegis Javelin field diff">Compare</button></div>
+            <div class="chips" hidden><button class="chip is-on" data-shot="compare" data-cap="LIVE 4.10.2 vs PTU 4.10.0 — summary of everything that changed">Compare</button></div>
           </div>
 
-          <!-- FILES -->
           <div class="panel" role="tabpanel" data-panel="files" aria-labelledby="tab-files" hidden>
             <div class="panel-copy">
               <h3>Files</h3>
-              <p>The raw archive as a folder tree. Preview a file, or extract a whole folder — with XML and PNG conversion as you go.</p>
+              <p>The raw archive as a folder tree. Preview a file — textures included — or extract a whole folder, with XML and PNG conversion as you go.</p>
             </div>
-            <div class="chips" hidden><button class="chip is-on" data-shot="files" data-cap="Data folder tree">Files</button></div>
+            <div class="chips" hidden><button class="chip is-on" data-shot="files" data-cap="Previewing a texture from the Data folder">Files</button></div>
           </div>
 
           <figure class="stage">
             <button class="stage-btn" type="button" aria-label="Open screenshot full size">
-              <img data-stage src="assets/img/shots/models-ships.webp" alt="Anvil F7C-M Hornet Heartseeker Mk II" width="1822" height="1054" loading="lazy">
+              <img data-stage src="assets/img/shots/prefabs-ships.webp" alt="Anvil F7C-M Hornet Heartseeker Mk II" width="2146" height="1175" loading="lazy">
             </button>
             <figcaption data-stage-cap>Anvil F7C-M Hornet Heartseeker Mk II</figcaption>
           </figure>
@@ -229,9 +240,6 @@
           <p>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to search items, files, text and records from anywhere.</p>
         </li>
       </ol>
-      <figure class="window start-shot">
-        <img src="assets/img/shots/start.webp" alt="mobiDex start screen with recent LIVE and PTU Data.p4k files and an Open a Data.p4k button" width="1822" height="1054" loading="lazy">
-      </figure>
     </div>
   </section>
 
